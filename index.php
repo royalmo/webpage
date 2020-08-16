@@ -1,4 +1,4 @@
 <?php
-    include(“/home.html”);
-    echo("hello world");
+    include(“home.html”);
+    echo("This website isn't ready yet!");
 ?>
