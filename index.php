@@ -1,1 +1,4 @@
-<?php readfile(“home.html”); echo("hello world");?>
+<?php
+    include(“home.html”);
+    echo("hello world");
+?>
