@@ -1,1 +1,1 @@
-<?php include_once(“home.html”); echo("hello world");?>
+<?php readfile(“home.html”); echo("hello world");?>
