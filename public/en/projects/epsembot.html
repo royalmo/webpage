@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>EPSEM Bot - Eric Roy</title>
+    <meta name="description" content="EPSEM Bot is a Discord bot that I made for checking if a user is a student or not. It involves some email verification, and you can also try it by yourself!">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="../../assets/css/Article-List.css">
+    <link rel="stylesheet" href="../../assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="../../assets/css/Features-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="../../assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="../../assets/css/Projects-Horizontal.css">
+    <link rel="stylesheet" href="../../assets/css/Video-Responsive-YouTube.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="https://ericroy.net/en/index.html">Eric Roy</a>
+            <div class="dropdown"><a class="dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="false" href="#">English</a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/ca/index.html">Català</a><a class="dropdown-item" href="https://ericroy.net/es/index.html">Español</a><a class="dropdown-item" href="https://ericroy.net/fr/index.html">Français</a></div>
+            </div><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/en/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/en/about-me.html">About me</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link" data-toggle="dropdown" aria-expanded="false" href="https://ericroy.net/en/project-list.html">Projects</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/en/projects/epsembot.html">Discord manager bot</a><a class="dropdown-item" href="https://ericroy.net/en/projects/nodemcu.html">Node MCU &amp; domotics</a><a class="dropdown-item" href="https://ericroy.net/en/projects/steppermotormusic.html">Stepper Motor Music</a><a class="dropdown-item" href="https://ericroy.net/en/projects/smaller-projects.html">Smaller projects</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/en/contact-me.html">Contact me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page project-page">
+        <section class="portfolio-block project">
+            <div class="container">
+                <div class="heading">
+                    <h2>EPSEM BOT</h2>
+                    <p>A Discord bot that manages all the user mails and roles.</p>
+                </div>
+                <div class="image" style="background-image:url(&quot;../../assets/img/hd_img/epsem_bot_showcase_code_snip.png&quot;);"></div>
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-1 info">
+                        <h3>What is it?</h3>
+                        <p style="text-align: justify;">We have a student-only Discord server with almost all the students of my degree. There, we can meet up and work together. As this year (due to the pandemic) we aren't able to meet a lot, it has been a good alternative to know better each other.</p>
+                        <p style="text-align: justify;">The main issue that the server had, compared to other university-related things, was that anyone could join that server: no proof of student was asked, no verification... it wasn't a secured place were.</p>
+                        <p style="text-align: justify;">That's why I thought&nbsp; it would be a good idea to make a Discord bot that could manage all the user verifications, and assign all the roles related to the degree year we are currently at, etc.</p>
+                        <p style="text-align: justify;">As we have a custom mail (@something.edu) in the university, if we make a bot that verifies that a Discord user has verified a valid mail (with that termination), we make sure that this person is a student, and can enter the server.</p>
+                        <h3>Actual situation</h3>
+                        <p style="text-align: justify;">By the end of this year, I've managed to deploy the MVP (minimum valuable product) of this project. It can assign roles and can check and verify e-mails. And it is dumb-proof: every case scenario has been planned!</p>
+                        <p style="text-align: justify;">I am currently hosting the bot on a Raspberry Pi 4 sitting next to my router, so there is almost any cost with this bot (just a little bit of power). I have used the same Raspberry from the Node MCU project.</p>
+                        <p style="text-align: justify;">You can check the actual status of the source code by checking the&nbsp;<a href="https://github.com/royalmo/EpsemBot">github repository</a>, where I commit every change that I make on the bot. And I have also made (a while ago) a YouTube video showcasing the MVP of the bot. The video is in Catalan as it was for some colleagues, but you can still check it here:</p>
+                        <div class="d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/guYZjuqu8qY" class="embed-responsive-item" width="320" height="175"></iframe></div>
+                        <h3><br>Future improvements</h3>
+                        <p style="text-align: justify;">There is still a lot to do in this project, but I am proud of it because I finished the crucial part of the bot: checking if someone is a student or not.</p>
+                        <p style="text-align: justify;">For the moment I have planned only 2 future improvements:</p>
+                        <ul>
+                            <li style="text-align: justify;font-size: 17,6px;"><strong>Automatize the role-assign part:</strong> currently, once the student is verified, some buttons need to be clicked by the user in order to get the correct roles. If the university gave me some way of checking into their database for automatically assigning the respective roles all the student (without them clicking on which they want), the bot would be more efficient.</li>
+                            <li style="text-align: justify;font-size: 17,6px;"><strong>Manage all voice channels:</strong> if an user enters a subject-related voice channel with some colleagues, that voice channel becomes occupied. What if another group of students need to work on that same subject at the same time? In that case we would need to create a new voice channel, with the same permission settings, and when the voice channel becomes available again, we delete the cloned channel. This hard work can only be done by a bot, and that's why it's on my improvements list.</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3 offset-md-1 meta">
+                        <div class="tags"><span class="meta-heading">In this project I used...</span><span>Python</span><span>Discord.py</span><span class="meta-heading">MVP finished by</span><span>December 2020</span></div>
+                    </div>
+                </div>
+                <div class="more-projects">
+                    <h3 class="text-center">More Projects</h3>
+                    <div class="row gallery">
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="nodemcu.html"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/nodemcu_wiring.png"></a></div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="steppermotormusic.html"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/steppermotormusic_outside.jpg"></a></div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="smaller-projects.html"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/FMradio_3Dpreview.png"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"><a href="https://ericroy.net/en/about-me.html">About me</a><a href="https://ericroy.net/en/contact-me.html">Contact me</a><a href="https://ericroy.net/en/project-list.html">Projects</a></div>
+            <div class="social-icons"><a href="https://www.linkedin.com/in/ericrooy"><i class="icon ion-social-linkedin-outline"></i></a><a href="https://github.com/royalmo"><i class="icon ion-social-github-outline"></i></a><a href="mailto:eric@ericroy.net"><i class="icon ion-ios-email-outline"></i></a></div><span><br>© Eric Roy, 2021.&nbsp; All rights reserved.<br><br><br></span>
+        </div>
+    </footer>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="../../assets/js/theme.js"></script>
+</body>
+
+</html>

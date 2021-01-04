@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Node MCU - Eric Roy</title>
+    <meta name="description" content="The purpose of this project was to power on and off my computer remotely through a Telegram bot. It also has some other options, but that was the main goal.">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="../../assets/css/Article-List.css">
+    <link rel="stylesheet" href="../../assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="../../assets/css/Features-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="../../assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="../../assets/css/Projects-Horizontal.css">
+    <link rel="stylesheet" href="../../assets/css/Video-Responsive-YouTube.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="https://ericroy.net/en/index.html">Eric Roy</a>
+            <div class="dropdown"><a class="dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="false" href="#">English</a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/ca/index.html">Català</a><a class="dropdown-item" href="https://ericroy.net/es/index.html">Español</a><a class="dropdown-item" href="https://ericroy.net/fr/index.html">Français</a></div>
+            </div><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/en/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/en/about-me.html">About me</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link" data-toggle="dropdown" aria-expanded="false" href="https://ericroy.net/en/project-list.html">Projects</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/en/projects/epsembot.html">Discord manager bot</a><a class="dropdown-item" href="https://ericroy.net/en/projects/nodemcu.html">Node MCU &amp; domotics</a><a class="dropdown-item" href="https://ericroy.net/en/projects/steppermotormusic.html">Stepper Motor Music</a><a class="dropdown-item" href="https://ericroy.net/en/projects/smaller-projects.html">Smaller projects</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/en/contact-me.html">Contact me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page project-page">
+        <section class="portfolio-block project">
+            <div class="container">
+                <div class="heading">
+                    <h2>NODE MCU &amp; DOMOTICS</h2>
+                    <p>Powering on/off my computer with a Telegram bot.</p>
+                </div>
+                <div class="image" style="background-image:url(&quot;../../assets/img/hd_img/nodemcu_wiring.png&quot;);"></div>
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-1 info">
+                        <h3>What is it?</h3>
+                        <p class="text-justify">The main goal of this project was to be able to start/stop and check if the pc was on or off remotely with Telegram messages trough a bot.</p>
+                        <p class="text-justify">The bot is managed in a Raspberry Pi 4 that I have always powered on next to my router. That way the bot is always online. But as the PC is not in the same room than the Raspberry, I had to think of a solution.</p>
+                        <p class="text-justify">After discarding putting wires trough the whole house and the <em>Wake on LAN </em>function (as I want my PC completely disconnected from power when I turn it off), all the possible solutions pointed in a Node MCU board: the two boards will communicate each other using WiFi.</p>
+                        <p class="text-justify">This board works (and can be programmed) as an Arduino, but it also has a Wireless antenna. After reading some docs and tutorials, I found out that making the MCU behave as a web server (answering requests) would be much easier to deal with than&nbsp; starting a <em>mqtt</em>&nbsp;communication system.</p>
+                        <p class="text-justify">Using some relays, diodes and photocouplers, my PC was securely listening the MCU instructions. As you can see in the main photo, I have soldered the components in a little board, to keep them cleaner and safer.</p>
+                        <h3><strong>Actual situation</strong><br></h3>
+                        <p class="text-justify">The project is currently in a standby. Since the "launch" day, there has been some issues with one photocoupler. As I was lazy to fix it properly, I patched some things up and changed some BIOS settings, so I can still power my computer on, but can't turn it off. But despite of that, the bot is working perfectly, and even with some extra functionalities.</p>
+                        <p class="text-justify">I have made the bot "secure" with some user permissions, very easy logins/logouts, etc. and easy-to-translate, by putting all the messages into a <em>.json</em> file.</p>
+                        <p class="text-justify">And last summer I connected 3 webcams (one wirelessly using Motion Eye OS) and set them to record when they detect some movement. But the relation with the webcams and this project was that a screenshot of any webcam could be sent at any moment trough Telegram using the bot.</p>
+                        <p class="text-justify">You can check some basic designs and the entire source code in the&nbsp;<a href="#">github repository</a>.</p>
+                        <h3>Future improvements</h3>
+                        <p class="text-justify">We can do so much things to improve the project. First of all, we could fix the problem that the board is having with the photocoupler. And then we could start by adding some easy functionalities, like an installer, manual, GUI, language selector, ... just to make the program very customizable.</p>
+                        <p class="text-justify">A thing that I have also planned to do (but again, not planned <em>when</em>&nbsp;to do it) is to control the Raspberry speakers using the Telegram bot, and program them, so some music will always be played during the desired amount of time.</p>
+                    </div>
+                    <div class="col-12 col-md-3 offset-md-1 meta">
+                        <div class="tags"><span class="meta-heading">In this project I used...</span><span>Python</span><span>Telepot library</span><span>Arduino-style programming</span><span>The Node MCU WiFi library</span><span>Circuit board design</span><span class="meta-heading">MVP finished by</span><span>May 2020</span></div>
+                    </div>
+                </div>
+                <div class="more-projects">
+                    <h3 class="text-center">More Projects</h3>
+                    <div class="row gallery">
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="epsembot.html"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/epsem_bot_showcase_code_snip.png"></a></div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="steppermotormusic.html"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/steppermotormusic_outside.jpg"></a></div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="smaller-projects.html"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/FMradio_3Dpreview.png"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"><a href="https://ericroy.net/en/about-me.html">About me</a><a href="https://ericroy.net/en/contact-me.html">Contact me</a><a href="https://ericroy.net/en/project-list.html">Projects</a></div>
+            <div class="social-icons"><a href="https://www.linkedin.com/in/ericrooy"><i class="icon ion-social-linkedin-outline"></i></a><a href="https://github.com/royalmo"><i class="icon ion-social-github-outline"></i></a><a href="mailto:eric@ericroy.net"><i class="icon ion-ios-email-outline"></i></a></div><span><br>© Eric Roy, 2021.&nbsp; All rights reserved.<br><br><br></span>
+        </div>
+    </footer>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="../../assets/js/theme.js"></script>
+</body>
+
+</html>
