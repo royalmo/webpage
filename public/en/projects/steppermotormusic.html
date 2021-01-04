@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Project Page - Eric Roy</title>
+    <meta name="description" content="Hi! This is my website, made by myself. You can know a little bit more about me here. Enjoy!">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="../../assets/css/Article-List.css">
+    <link rel="stylesheet" href="../../assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="../../assets/css/Features-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="../../assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="../../assets/css/Projects-Horizontal.css">
+    <link rel="stylesheet" href="../../assets/css/Video-Responsive-YouTube.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="en/index.html">Eric Roy</a>
+            <div class="dropdown"><a class="dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="false" href="index.html">English</a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="../ca/index.html">Català</a><a class="dropdown-item" href="../es/index.html">Español</a><a class="dropdown-item" href="../fr/index.html">Français</a></div>
+            </div><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="en/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="en/about-me.html">About me</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link" data-toggle="dropdown" aria-expanded="false" href="en/project-list.html">Projects</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="en/projects/epsembot.html">Discord manager bot</a><a class="dropdown-item" href="en/projects/nodemcu.html">Node MCU &amp; domotics</a><a class="dropdown-item" href="en/projects/steppermotormusic.html">Stepper Motor Music</a><a class="dropdown-item" href="en/projects/smaller-projects.html">Smaller projects</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="en/contact-me.html">Contact me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page project-page">
+        <section class="portfolio-block project">
+            <div class="container">
+                <div class="heading">
+                    <h2>STEPPER MOTOR MUSIC</h2>
+                    <p>Controlled remotely and using MIDI files.</p>
+                </div>
+                <div class="image" style="background-image:url(&quot;../../assets/img/hd_img/steppermotormusic_outside.jpg&quot;);"></div>
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-1 info">
+                        <h3>What is it?</h3>
+                        <p class="text-justify">I had the opportunity to develop this project as the Research Work (<em>Treball de Recerca</em>) in my school, when I was 16-17. So, as I had a death line, I had to work more often on it.</p>
+                        <p class="text-justify">The idea of making a Stepper Motor Music machine came to my head when I saw a YouTube video where 4 motors were playing <em>You've got a friend in me</em>. And I thought it would be cool to be able to try the SMM by myself.</p>
+                        <p class="text-justify">We call it Stepper Motor Music because the sounds are made by the vibrations of a motor (if it spins faster, the note pitch is higher; and if it spins slower, the pitch is lower). More precisely, a stepper motor vibrates with much more intensity than the rest of the motors. That's why it's a good candidate for making music.</p>
+                        <p class="text-justify">To make the two motors spin, I needed two stepper motor controllers (or drivers), so they could work with 12V even if the other electric components worked with 5V. Those motors would be controlled by an Arduino, that would behave as a MIDI device when plugged in via USB to a Raspberry Pi 3B. Then, through the Raspberry, some songs could be selected wirelessly.</p>
+                        <p class="text-justify">All of these components would be inside a wooden box, so the sound of the motors is a little bit more amplified. Some buttons and status LEDs will be added on top of the box too, and a power jack output would be prepared at the back of the box. I also used a 12V to 5V transformer in order to get 5V to aliment the Arduino and the Raspberry Pi with only one 12V plug (that will also be used for the motors).</p>
+                        <p class="text-justify">The button on top of the box was designed to <em>block</em>&nbsp;the motors, so they don't heat up when no music is playing. A LED shows if the motors are blocked or not.</p>
+                        <p class="text-justify">All these ideas were successfully designed and built inside the box, except for one: being able to play wirelessly. I was having problems with some midi drivers, and at that time I didn't have the courage to modify advanced driver settings.</p>
+                        <p class="text-justify">So, to solve this problem, instead of going to a website, the user would VNC connect into the raspberry PI, where inside there, an application would be always opened, and it would work like a small GUI. A simple (and not very elegant) solution, but it worked pretty well.</p><img class="img-fluid" src="../../assets/img/hd_img/IMG_20191013_132907.jpg">
+                        <p class="text-center"><em>Electronics inside the box.</em></p>
+                        <h3><strong>Actual situation</strong><br></h3>
+                        <p class="text-justify">The project was presented at the school, with all the documentation used and a little demo (I just played two songs). I had a mark of 10/10, which means that learning things and having good results is very compatible!</p>
+                        <p class="text-justify">The model is now in my room, and sometimes I play one or two songs to remember what I did.</p>
+                        <p class="text-justify">As with most of my projects, you can go check the source code and some other important files in the&nbsp;<a href="https://github.com/royalmo/StepperMotorMusic">github repository</a>. And if you want to check the pdf files of the paper and the presentation, you can go at <a href="https://tiny.cc/StepperMotorMusic">tiny.cc/StepperMotorMusic</a>, where you can find a small demonstration with the song <em>Africa,</em>&nbsp;by Toto (all the documents in there are in French).</p>
+                        <h3>Future improvements</h3>
+                        <p class="text-justify">All the things that couldn't be done due to the death line (more wireless stability, a GUI, a playlist option...) could be done some day. But, I don't think I am going to touch this project anymore.</p>
+                    </div>
+                    <div class="col-12 col-md-3 offset-md-1 meta">
+                        <div class="tags"><span class="meta-heading">In this project I used...</span><span>Python</span><span>Communication protocols</span><span>Arduino-style programming</span><span>Circuit and physical design</span><span>Acoustics</span><span class="meta-heading">MVP finished by</span><span>November 2019</span></div>
+                    </div>
+                </div>
+                <div class="more-projects">
+                    <h3 class="text-center">More Projects</h3>
+                    <div class="row gallery">
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="#"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/epsem_bot_showcase_code_snip.png"></a></div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="#"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/nodemcu_wiring.png"></a></div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="#"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/FMradio_3Dpreview.png"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"><a href="en/about-me.html">About me</a><a href="en/contact-me.html">Contact me</a><a href="en/project-list.html">Projects</a></div>
+            <div class="social-icons"><a href="https://www.linkedin.com/in/ericrooy"><i class="icon ion-social-linkedin-outline"></i></a><a href="https://github.com/royalmo"><i class="icon ion-social-github-outline"></i></a><a href="mailto:eric@ericroy.net"><i class="icon ion-ios-email-outline"></i></a></div><span><br>© Eric Roy, 2021.&nbsp; All rights reserved.<br><br><br></span>
+        </div>
+    </footer>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="../../assets/js/SmoothScroll/smooth-scroll.js"></script>
+    <script src="../../assets/js/SmoothScroll/smooth-scroll.min.js"></script>
+    <script src="../../assets/js/SmoothScroll/smooth-scroll.polyfills.js"></script>
+    <script src="../../assets/js/SmoothScroll/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/js/theme.js"></script>
+</body>
+
+</html>
