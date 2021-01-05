@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Stepper Motor Music - Eric Roy</title>
+    <meta name="description" content="This school project had the goal to make music with stepper motors, and it's remotely controllable, so you can press play from your phone!">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="../../assets/css/Article-List.css">
+    <link rel="stylesheet" href="../../assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="../../assets/css/Features-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="../../assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="../../assets/css/Projects-Horizontal.css">
+    <link rel="stylesheet" href="../../assets/css/Video-Responsive-YouTube.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="https://ericroy.net/ca/">Eric Roy</a>
+            <div class="dropdown"><a class="dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="false" href="#">Català</a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/en/projects/steppermotormusic">English</a><a class="dropdown-item" href="https://ericroy.net/es/projects/steppermotormusic">Español</a><a class="dropdown-item" href="https://ericroy.net/fr/projects/steppermotormusic">Français</a></div>
+            </div><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Veure navegació</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/ca/">Inici</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/ca/about-me">Sobre mi</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link" data-toggle="dropdown" aria-expanded="false" href="https://ericroy.net/ca/project-list">Projectes</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/ca/projects/epsembot">Bot de Discord</a><a class="dropdown-item" href="https://ericroy.net/ca/projects/nodemcu">Node MCU &amp; domòtica</a><a class="dropdown-item" href="https://ericroy.net/ca/projects/steppermotormusic">Stepper Motor Music</a><a class="dropdown-item" href="https://ericroy.net/ca/projects/smaller-projects">Petits projectes</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/ca/contact-me">Contacte</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page project-page">
+        <section class="portfolio-block project">
+            <div class="container">
+                <div class="heading">
+                    <h2>STEPPER MOTOR MUSIC</h2>
+                    <p>Amb control via Wi-Fi i fitxers MIDI.</p>
+                </div>
+                <div class="image" style="background-image:url(&quot;../../assets/img/hd_img/steppermotormusic_outside.jpg&quot;);"></div>
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-1 info">
+                        <h3>Què és?</h3>
+                        <p class="text-justify">Vaig tenir la oportunitat de desenvolupar aquest projecte com a Treball de Recerca del Batxillerat Tecnològic que vaig cursar, quan tenia 16-17 anys. Al tenir dates límit, vaig haver d'anar una mica més a la idea del que m'hauria agradat.</p>
+                        <p class="text-justify">La idea de fer un TDR sobre el fenòmen de la música amb motors de pas (en anglès, <em>Stepper Motor Music</em>) em va venir després de veure un vídeo a YouTube on es tocava la cançó de <em>You've got a friend in me</em> en 4 motors de pas. Vaig pensar que seria una bona idea provar de fer pel meu compte una maqueta de SMM.</p>
+                        <p class="text-justify">El SMM s'anomena així perquè els sons es generen amb les vibracions dels motors (si el motor mira més ràpid, el so és més agut, en canvi, si gira més lent, el motor vibra menys, i el so és més greu). Més precisament, un motor de pas vibra amb molta més intensitat que la resta de motors. Per això és un bon candidat per a fer música.</p>
+                        <p class="text-justify">Per a fer girar els dos motors que volia tenir a la meva maqueta, necessitava dos controladors (o drivers) de motors de pas, per a que els motors puguin funcionar a 12V, però que la resta de components, com l'Arduino o la Raspberry Pi funcionin a 5V. Una placa Arduino serà l'encarregada de controlar els dos drivers, i es comportarà com un dispositiu MIDI al estar connectada via USB a una Raspberry Pi 3B. Llavors, a través de la Raspberry, podrem escollir les cançons mitjançant una connexió WiFi.</p>
+                        <p class="text-justify">Tots aquests components estaran situats dintre d'una caixa de fusta. D'aquesta manera, el so dels motors serà amplificat com si d'una guitarra es tractés. Afegirem alguns botons i LEDs per a engegar i apagar els dispositius, i també farem servir un adaptador de 12V a 5V per a evitar d'haver de connectar dos cables dintre de la caixa (així només ens en farà falta un de 12V).</p>
+                        <p class="text-justify">El botó de sobre la caixa <em>bloqueja</em> els motors, per a evitar que es sobrecalentin quan no estan tocant música. Un indicador LED mostra si es troben bloquejats o no.</p>
+                        <p class="text-justify">Tots aquests conceptes explicats anteriorment van ser implementats per a dissenyar i construir la maqueta. Després de dos prototips (veure memòria del projecte), es va acabar amb el producte final. Només em faltava programar la habilitat de controlar de forma remota l'aparell, però estava tenint problemes amb els drivers de MIDI quan els posava dintre del fitxer de Python. Com que tampoc tenia gaire temps, vaig pensar que la solució més intel·ligent seria de no modificar cap fitxer intern i buscar alternatives.</p>
+                        <p class="text-justify">Per a solucionar aquest problema, enlloc d'anar en una pàgina web (com es tenia planejat), l'usuari es connectaria mitjançant l'aplicació VNC a la Raspberry Pi, on a dintre es trobaria el reproductor de MIDI i la seva simple pero funcional interfaç. Una solució simple (i no gaire elegant), però que va salvar el TDR.</p><img class="img-fluid" src="../../assets/img/hd_img/IMG_20191013_132907.jpg">
+                        <p class="text-center"><em>Interior de la maqueta final.</em></p>
+                        <h3><strong>Situació actual</strong><br></h3>
+                        <p class="text-justify">El projecte es va presentar a l'institut, juntament amb la memòria i una petita demostració en directe (dues cançons). Vaig treure un 10 de nota final, pel que demostra que aprendre i tenir bons resultats és compatible!</p>
+                        <p class="text-justify">Actualment, la maqueta es troba en la meva habitació, i de vegades l'engego per escoltar alguna cançó i recordar el projecte que vaig fer.</p>
+                        <p class="text-justify">Com amb quasi tots els meus projectes, podeu anar a comprovar el codi font i els fitxers importants al <a href="https://github.com/royalmo/StepperMotorMusic">repositori de GitHub</a>. I si voleu veure la memòria del projecte, podeu anar a <a href="https://tiny.cc/StepperMotorMusic">tiny.cc/StepperMotorMusic</a>, on també hi trobareu una demostració de la maqueta amb la cançó de <em>Africa</em>, de Toto (tots els documents estan en francès).</p>
+                        <h3>Futures millores</h3>
+                        <p class="text-justify">Totes les coses que no es van poder dur a terme degut a la data limit (més estabilitat WiFi, una GUI, seleccionar llistes de reproducció, ...) es podrien fer com a ampliacions. Però no crec que em posi de nou a treballar en aquest projecte, ja que tampoc hi veig una necessitat directa.</p>
+                    </div>
+                    <div class="col-12 col-md-3 offset-md-1 meta">
+                        <div class="tags"><span class="meta-heading">En aquest projectee he utilitzat...</span><span>Python</span><span>Protocols de comunicació</span><span>Programació en Arduino</span><span>Disseny de circuits i maquetes</span><span>Acústica</span><span class="meta-heading">Primera versió acabada pel</span><span>Novembre de 2019</span></div>
+                    </div>
+                </div>
+                <div class="more-projects">
+                    <h3 class="text-center">Més Projectes</h3>
+                    <div class="row gallery">
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="https://ericroy.net/ca/projects/epsembot"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/epsem_bot_showcase_code_snip.png"></a></div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="https://ericroy.net/ca/projects/nodemcu"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/nodemcu_wiring.png"></a></div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="https://ericroy.net/ca/projects/smaller-projects"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/FMradio_3Dpreview.png"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"><a href="https://ericroy.net/ca/about-me">Sobre mi</a><a href="https://ericroy.net/ca/contact-me">Contacte</a><a href="https://ericroy.net/ca/project-list">Projectes</a></div>
+            <div class="social-icons"><a href="https://www.linkedin.com/in/ericrooy"><i class="icon ion-social-linkedin-outline"></i></a><a href="https://github.com/royalmo"><i class="icon ion-social-github-outline"></i></a><a href="mailto:eric@ericroy.net"><i class="icon ion-ios-email-outline"></i></a></div><span><br>© Eric Roy, 2021.&nbsp; Tots els drets reservats.<br><br><br></span>
+        </div>
+    </footer>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="../../assets/js/theme.js"></script>
+</body>
+
+</html>
