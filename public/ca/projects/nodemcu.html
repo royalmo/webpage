@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Node MCU - Eric Roy</title>
+    <meta name="description" content="El propòsit d'aquest projecte era d'engegar i d'apagar el meu ordinador a través d'un robot de Telegram, tot i que aquest també fa altres funcions.">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="../../assets/css/Article-List.css">
+    <link rel="stylesheet" href="../../assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="../../assets/css/Features-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="../../assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="../../assets/css/Projects-Horizontal.css">
+    <link rel="stylesheet" href="../../assets/css/Video-Responsive-YouTube.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="https://ericroy.net/ca/">Eric Roy</a>
+            <div class="dropdown"><a class="dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="false" href="#">Català</a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/en/projects/nodemcu">English</a><a class="dropdown-item" href="https://ericroy.net/es/projects/nodemcu">Español</a><a class="dropdown-item" href="https://ericroy.net/fr/projects/nodemcu">Français</a></div>
+            </div><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Veure navegació</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/ca/">Inici</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/ca/about-me">Sobre mi</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link" data-toggle="dropdown" aria-expanded="false" href="https://ericroy.net/ca/project-list">Projectes</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/ca/projects/epsembot">Bot de Discord</a><a class="dropdown-item" href="https://ericroy.net/ca/projects/nodemcu">Node MCU &amp; domòtica</a><a class="dropdown-item" href="https://ericroy.net/ca/projects/steppermotormusic">Stepper Motor Music</a><a class="dropdown-item" href="https://ericroy.net/ca/projects/smaller-projects">Petits projectes</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/ca/contact-me">Contacte</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page project-page">
+        <section class="portfolio-block project">
+            <div class="container">
+                <div class="heading">
+                    <h2>NODE MCU &amp; DOMÒTICA</h2>
+                    <p>Engegar i apagar el meu ordinador amb un robot de Telegram.</p>
+                </div>
+                <div class="image" style="background-image:url(&quot;../../assets/img/hd_img/nodemcu_wiring.png&quot;);"></div>
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-1 info">
+                        <h3>Què és?</h3>
+                        <p class="text-justify">El principal objectiu d'aquest projecte era de poder engegar, apagar i comprovar l'estat (si es troba encès o apagat) del meu ordinador a través de missatges de Telegram a un robot.</p>
+                        <p class="text-justify">El robot esta allotjat a una Raspberry Pi 4 que he situat al costat del router, i que sempre està encesa. D'aquesta manera el robot es troba sempre connectat. Però com que el meu ordinador no es troba a la mateixa habitació que la Raspberry, necessitava alguna manera de comunicar els dos aparells entre ells.</p>
+                        <p class="text-justify">Després de descartar l'opció de foradar les parets de casa per a passar cables i l'opció de <em>Wake on LAN</em> que tenen els ordinadors (no ho volia ja que només el podria encendre si hi té connexió a internet i està endollat, i vull tenir l'ordinador desendollat), totes les solucions apuntaven a la placa Node MCU: les dues plaques es comunicarien entre elles mitjançant la connexió WiFi de casa.</p>
+                        <p class="text-justify">Aquesta placa funciona (i es programa) com si fós un Arduino, però també té una antena WiFi. Després de mirar la documentació i algun tutorial, vaig veure que fent que la placa es comportés com un servidor web (responent peticions) em seria molt més fàcil i ràpid de programar que si hagués de crear un protocol <em>mqtt</em> a casa.</p>
+                        <p class="text-justify">Fent servir relés, diodes i fotocopladors, vaig connectar els cables d'encesa i d'alimentació del meu ordinador als pins de la placa MCU. Com haureu pogut veure a la foto principal, he soldat els components en una petita placa, per a deixar el circuit final més polit i segur.</p>
+                        <h3><strong>Situació actual</strong><br></h3>
+                        <p class="text-justify">Actualment tinc aquest projecte una mica aparcat. Des del dia del "llançament", he tingut problemes amb un fotocoplador. Com que em feia mandra d'arreglar-ho, ja que potser em portaria hores (o dies) de reconstrucció del circuit, vaig canviar alguns paràmetres de la BIOS del meu ordinador, de tal manera que segueixo podent encendre el meu ordinador, però no el puc apagar remotament. Com que, de moment, no he tingut la necessitat d'apagar-lo amb el robot de Telegram, el robot em funciona a la perfecció. He afegit, fins i tot, algunes funcionalitats addicionals.</p>
+                        <p class="text-justify">He fet el robot més "segur", demanant permisos (com contrassenyes) per a poder fer funcions com engegar i apagar l'ordinador. També l'he fet fàcil de traduir (i algun dia el traduiré), ja que totes les respostes que envia per Telegram es troben guardades dintre d'un fitxer de format <em>.json</em> .</p>
+                        <p class="text-justify">I durant l'estiu passat vaig connectar 3 webcams (una mitjançant la connexió WiFi i el sistema de MotionEyeOS) i les vaig configurar per a enregistrar qualssevol tipus de moviment detectat. Però la relació que tenen les webcams amb aquest projecte és que podia demanar a través de Telegram una fotografia instantània de qualsevol càmera.</p>
+                        <p class="text-justify">Podeu veure alguns dels dissenys bàsics i tot el codi font del projecte dintre del seu propi <a href="#">repositori de GitHub</a>.</p>
+                        <h3>Futures millores</h3>
+                        <p class="text-justify">Es poden millorar moltes coses en aquest projecte. Primer de tot, podríem arreglar el problema actual que m'impedeix apagar el meu ordenador. I es podrien afegir funcionalitats extres, com un manual, un instal·lador, una GUI, un selector d'idioma, ... tot per a fer el programa més personalitzable.</p>
+                        <p class="text-justify">Una cosa que també tinc planejada de fer (però no <em>quan</em> ho tinc pensat fer) és de poder controlar els altaveus de la Raspberry Pi (en vaig connectar uns antics) també per mitjà del robot de Telegram. D'aquesta manera, també es podria programar uns horaris on estaria sonant música, etc.</p>
+                    </div>
+                    <div class="col-12 col-md-3 offset-md-1 meta">
+                        <div class="tags"><span class="meta-heading">En aquest projecte he utilitzat...</span><span>Python</span><span>Llibreria de Telepot</span><span>Programació en Arduino</span><span>Llibreria WiFi del Node MCU</span><span>Disseny de circuits</span><span class="meta-heading">Primera versió acabada pel</span><span>Maig de 2020</span></div>
+                    </div>
+                </div>
+                <div class="more-projects">
+                    <h3 class="text-center">Més Projectes</h3>
+                    <div class="row gallery">
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="https://ericroy.net/ca/projects/epsembot"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/epsem_bot_showcase_code_snip.png"></a></div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="https://ericroy.net/ca/projects/steppermotormusic"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/steppermotormusic_outside.jpg"></a></div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="https://ericroy.net/ca/projects/smaller-projects"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/FMradio_3Dpreview.png"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"><a href="https://ericroy.net/ca/about-me">Sobre mi</a><a href="https://ericroy.net/ca/contact-me">Contacte</a><a href="https://ericroy.net/ca/project-list">Projectes</a></div>
+            <div class="social-icons"><a href="https://www.linkedin.com/in/ericrooy"><i class="icon ion-social-linkedin-outline"></i></a><a href="https://github.com/royalmo"><i class="icon ion-social-github-outline"></i></a><a href="mailto:eric@ericroy.net"><i class="icon ion-ios-email-outline"></i></a></div><span><br>© Eric Roy, 2021.&nbsp; Tots els drets reservats.<br><br><br></span>
+        </div>
+    </footer>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="../../assets/js/theme.js"></script>
+</body>
+
+</html>
