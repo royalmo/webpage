@@ -1,51 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://ericroy.net/ca/contact-me.html</loc>
+        <loc>https://ericroy.net/</loc>
     </url>
     <url>
-        <loc>https://ericroy.net/ca/index.html</loc>
+        <loc>https://ericroy.net/en/projects/epsembot</loc>
     </url>
     <url>
-        <loc>https://ericroy.net/en/projects/epsembot.html</loc>
+        <loc>https://ericroy.net/en/projects/nodemcu</loc>
     </url>
     <url>
-        <loc>https://ericroy.net/en/projects/nodemcu.html</loc>
+        <loc>https://ericroy.net/en/projects/smaller-projects</loc>
     </url>
     <url>
-        <loc>https://ericroy.net/en/projects/smaller-projects.html</loc>
+        <loc>https://ericroy.net/en/projects/steppermotormusic</loc>
     </url>
     <url>
-        <loc>https://ericroy.net/en/projects/steppermotormusic.html</loc>
+        <loc>https://ericroy.net/en/about-me</loc>
     </url>
     <url>
-        <loc>https://ericroy.net/en/about-me.html</loc>
+        <loc>https://ericroy.net/en/contact-me</loc>
     </url>
     <url>
-        <loc>https://ericroy.net/en/contact-me.html</loc>
+        <loc>https://ericroy.net/en/</loc>
     </url>
     <url>
-        <loc>https://ericroy.net/en/index.html</loc>
+        <loc>https://ericroy.net/en/project-list</loc>
+    </url>
+        <url>
+        <loc>https://ericroy.net/ca/projects/epsembot</loc>
     </url>
     <url>
-        <loc>https://ericroy.net/en/project-list.html</loc>
+        <loc>https://ericroy.net/ca/projects/nodemcu</loc>
     </url>
     <url>
-        <loc>https://ericroy.net/es/contact-me.html</loc>
+        <loc>https://ericroy.net/ca/projects/smaller-projects</loc>
     </url>
     <url>
-        <loc>https://ericroy.net/es/index.html</loc>
+        <loc>https://ericroy.net/ca/projects/steppermotormusic</loc>
     </url>
     <url>
-        <loc>https://ericroy.net/fr/contact-me.html</loc>
+        <loc>https://ericroy.net/ca/about-me</loc>
     </url>
     <url>
-        <loc>https://ericroy.net/fr/index.html</loc>
+        <loc>https://ericroy.net/ca/contact-me</loc>
     </url>
     <url>
-        <loc>https://ericroy.net/404.html</loc>
+        <loc>https://ericroy.net/ca/</loc>
     </url>
     <url>
-        <loc>https://ericroy.net/index.html</loc>
+        <loc>https://ericroy.net/ca/project-list</loc>
+    </url>
+        <url>
+        <loc>https://ericroy.net/es/projects/epsembot</loc>
+    </url>
+    <url>
+        <loc>https://ericroy.net/es/projects/nodemcu</loc>
+    </url>
+    <url>
+        <loc>https://ericroy.net/es/projects/smaller-projects</loc>
+    </url>
+    <url>
+        <loc>https://ericroy.net/es/projects/steppermotormusic</loc>
+    </url>
+    <url>
+        <loc>https://ericroy.net/es/about-me</loc>
+    </url>
+    <url>
+        <loc>https://ericroy.net/es/contact-me</loc>
+    </url>
+    <url>
+        <loc>https://ericroy.net/es/</loc>
+    </url>
+    <url>
+        <loc>https://ericroy.net/es/project-list</loc>
+    </url>
+        <url>
+        <loc>https://ericroy.net/fr/projects/epsembot</loc>
+    </url>
+    <url>
+        <loc>https://ericroy.net/fr/projects/nodemcu</loc>
+    </url>
+    <url>
+        <loc>https://ericroy.net/fr/projects/smaller-projects</loc>
+    </url>
+    <url>
+        <loc>https://ericroy.net/fr/projects/steppermotormusic</loc>
+    </url>
+    <url>
+        <loc>https://ericroy.net/fr/about-me</loc>
+    </url>
+    <url>
+        <loc>https://ericroy.net/fr/contact-me</loc>
+    </url>
+    <url>
+        <loc>https://ericroy.net/fr/</loc>
+    </url>
+    <url>
+        <loc>https://ericroy.net/fr/project-list</loc>
     </url>
 </urlset>
