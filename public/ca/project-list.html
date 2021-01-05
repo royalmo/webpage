@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Contacte - Eric Roy</title>
-    <meta name="description" content="Aquí podeu trobar algunes formes de contactar-me.">
+    <title>Projectes - Eric Roy</title>
+    <meta name="description" content="Aquí podeu veure una llista de tots els projectes publicats, amb una breu descripció.">
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
@@ -23,7 +23,7 @@
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
         <div class="container"><a class="navbar-brand logo" href="https://ericroy.net/ca/">Eric Roy</a>
             <div class="dropdown"><a class="dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="false" href="#">Català</a>
-                <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/en/contact-me">English</a><a class="dropdown-item" href="https://ericroy.net/es/contact-me">Español</a><a class="dropdown-item" href="https://ericroy.net/fr/contact-me">Français</a></div>
+                <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/en/project-list">English</a><a class="dropdown-item" href="https://ericroy.net/es/project-list">Español</a><a class="dropdown-item" href="https://ericroy.net/fr/project-list">Français</a></div>
             </div><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Veure navegació</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav navbar-nav ml-auto">
@@ -37,25 +37,30 @@
             </div>
         </div>
     </nav>
-    <main class="page contact-page"></main>
-    <div class="features-clean">
+    <main class="page project-page"></main>
+    <div class="projects-horizontal"></div>
+    <div class="article-list">
         <div class="container">
             <div class="intro">
-                <h2 class="text-center">CONTACTE</h2>
-                <p class="text-center">Si voleu saber alguna cosa més de mi, o només veure el meu perfil de GitHub, podeu fer servir els següents mitjans.</p>
+                <h2 class="text-center">PROJECTES</h2>
+                <p class="text-center">Aquí podeu veure tots els pojectes publicats. Feu clic a cada projecte per a obtenir més informació.</p>
             </div>
-            <div class="row features" style="text-align: left;">
-                <div class="col-12 col-sm-6 col-lg-4 offset-0 item"><i class="fa fa-envelope-square icon"></i>
-                    <h3 class="name">E-mail</h3>
-                    <p class="description">Contacteu-me a:&nbsp;<a href="mailto:eric@ericroy.net">eric@ericroy.net</a>.<br>Normalment responc en menys d'un dia.</p>
+            <div class="row articles">
+                <div class="col-sm-6 col-md-4 item"><a href="https://ericroy.net/ca/projects/epsembot"><img class="img-fluid" src="../assets/img/hd_img/epsem_bot_showcase_code_snip.png"></a>
+                    <h3 class="name">EPSEM Bot</h3>
+                    <p class="description">Aquest bot de Discord comprova que els usuaris que entrin en un servidor de Discord siguin estudiants de la universitat, mitjançant una comprovació d'e-mail. També gestiona alguns rols.</p><a class="action" href="https://ericroy.net/ca/projects/epsembot"><i class="fa fa-arrow-circle-right"></i></a>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-4 offset-0 item"><i class="fa fa-linkedin-square icon"></i>
-                    <h3 class="name">Linkedin</h3>
-                    <p class="description">No el tinc gaire actualitzat, però m'hi podeu trobar a:&nbsp;<a href="https://www.linkedin.com/in/ericrooy"><span style="text-decoration: underline;">linkedin.com/in/ericrooy</span></a></p>
+                <div class="col-sm-6 col-md-4 item"><a href="https://ericroy.net/ca/projects/nodemcu"><img class="img-fluid" src="../assets/img/hd_img/nodemcu_wiring.png"></a>
+                    <h3 class="name">Node MCU &amp; Bot de Telegram</h3>
+                    <p class="description">Utilitzant la placa Node MCU, alguns components electrònics i una Raspberry Pi, he aconseguit apagar i engegar el meu ordinador mitjançant un missatge de Telegram.</p><a class="action" href="https://ericroy.net/ca/projects/nodemcu"><i class="fa fa-arrow-circle-right"></i></a>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-4 offset-0 item" style="text-align: left;"><i class="fa fa-github-square icon"></i>
-                    <h3 class="name">GitHub</h3>
-                    <p class="description">No crec que em pugueu enviar un missatge a través de GitHub, però allà trobareu molts projectes meus:&nbsp; &nbsp;<a href="https://github.com/royalmo">github.com/royalmo</a></p>
+                <div class="col-sm-6 col-md-4 item"><a href="https://ericroy.net/ca/projects/steppermotormusic"><img class="img-fluid" src="../assets/img/hd_img/steppermotormusic_outside.jpg"></a>
+                    <h3 class="name">Stepper Motor Music</h3>
+                    <p class="description">Això va ser el meu Treball de Recerca. Seguint una moda d'internet de fer música amb motors "de pas" (o stepper motors), vaig dissenyar i construir la meva pròpia maqueta, que toca cançons en format MIDI.</p><a class="action" href="https://ericroy.net/ca/projects/steppermotormusic"><i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+                <div class="col-sm-6 col-md-4 item"><a href="https://ericroy.net/ca/projects/smaller-projects"><img class="img-fluid" src="../assets/img/hd_img/FMradio_3Dpreview.png"></a>
+                    <h3 class="name">Petits projectes</h3>
+                    <p class="description">Aquí trobareu una llista amb altres projectes que he fet, però que no són tan grans o tan emocionants com per a dedicar una pàgina sencera.</p><a class="action" href="https://ericroy.net/ca/projects/smaller-projects"><i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
         </div>
