@@ -23,7 +23,7 @@
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
         <div class="container"><a class="navbar-brand logo" href="https://ericroy.net/fr/">Eric Roy</a>
             <div class="dropdown"><a class="dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="false" href="#">Français</a>
-                <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/en/">English</a><a class="dropdown-item" href="https://ericroy.net/ca/">Català</a><a class="dropdown-item" href="https://ericroy.net/es/">Español</a></div>
+                <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/en/projects/nodemcu">English</a><a class="dropdown-item" href="https://ericroy.net/ca/projects/nodemcu">Català</a><a class="dropdown-item" href="https://ericroy.net/es/projects/nodemcu">Español</a></div>
             </div><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Voir navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav navbar-nav ml-auto">
@@ -41,26 +41,26 @@
         <section class="portfolio-block project">
             <div class="container">
                 <div class="heading">
-                    <h2>NODE MCU &amp; DOMOTICS</h2>
-                    <p>Powering on/off my computer with a Telegram bot.</p>
+                    <h2>NODE MCU &amp; DOMOTIQUE</h2>
+                    <p>Allumer/éteindre mon ordinateur avec un robot de Telegram.</p>
                 </div>
                 <div class="image" style="background-image:url(&quot;../../assets/img/hd_img/nodemcu_wiring.png&quot;);"></div>
                 <div class="row">
                     <div class="col-12 col-md-6 offset-md-1 info">
-                        <h3>What is it?</h3>
-                        <p class="text-justify">The main goal of this project was to be able to start/stop and check if the pc was on or off remotely with Telegram messages trough a bot.</p>
-                        <p class="text-justify">The bot is managed in a Raspberry Pi 4 that I have always powered on next to my router. That way the bot is always online. But as the PC is not in the same room than the Raspberry, I had to think of a solution.</p>
-                        <p class="text-justify">After discarding putting wires trough the whole house and the <em>Wake on LAN </em>function (as I want my PC completely disconnected from power when I turn it off), all the possible solutions pointed in a Node MCU board: the two boards will communicate each other using WiFi.</p>
-                        <p class="text-justify">This board works (and can be programmed) as an Arduino, but it also has a Wireless antenna. After reading some docs and tutorials, I found out that making the MCU behave as a web server (answering requests) would be much easier to deal with than&nbsp; starting a <em>mqtt</em>&nbsp;communication system.</p>
-                        <p class="text-justify">Using some relays, diodes and photocouplers, my PC was securely listening the MCU instructions. As you can see in the main photo, I have soldered the components in a little board, to keep them cleaner and safer.</p>
-                        <h3><strong>Actual situation</strong><br></h3>
-                        <p class="text-justify">The project is currently in a standby. Since the "launch" day, there has been some issues with one photocoupler. As I was lazy to fix it properly, I patched some things up and changed some BIOS settings, so I can still power my computer on, but can't turn it off. But despite of that, the bot is working perfectly, and even with some extra functionalities.</p>
-                        <p class="text-justify">I have made the bot "secure" with some user permissions, very easy logins/logouts, etc. and easy-to-translate, by putting all the messages into a <em>.json</em> file.</p>
-                        <p class="text-justify">And last summer I connected 3 webcams (one wirelessly using Motion Eye OS) and set them to record when they detect some movement. But the relation with the webcams and this project was that a screenshot of any webcam could be sent at any moment trough Telegram using the bot.</p>
-                        <p class="text-justify">You can check some basic designs and the entire source code in the&nbsp;<a href="https://github.com/royalmo/NodeMCU_PC">github repository</a>.</p>
-                        <h3>Future improvements</h3>
-                        <p class="text-justify">We can do so much things to improve the project. First of all, we could fix the problem that the board is having with the photocoupler. And then we could start by adding some easy functionalities, like an installer, manual, GUI, language selector, ... just to make the program very customizable.</p>
-                        <p class="text-justify">A thing that I have also planned to do (but again, not planned <em>when</em>&nbsp;to do it) is to control the Raspberry speakers using the Telegram bot, and program them, so some music will always be played during the desired amount of time.</p>
+                        <h3>Qu'est-ce que c'est?</h3>
+                        <p class="text-justify">L'objectif principal de ce projet était de pouvoir démarrer, arrêter, et vérifier si mon ordinateur était allumé ou éteint à distance avec des messages via un robot de Telegram.</p>
+                        <p class="text-justify">Le bot est hébergé dans une Raspberry Pi 4 que j'ai à côté de mon routeur. De cette façon, le robot est toujours en ligne. Mais comme mon PC n'est pas dans la même pièce que la Raspberry, j'ai dû réfléchir à une solution pour communiquer les deux appareils.</p>
+                        <p class="text-justify">Après avoir mis de côté l'idée de faire passer des fils dans toute la maison et la fonction de <em>Wake on LAN</em> de mon ordinateur (car je veux que mon PC soit complètement déconnecté de l'alimentation lorsque je l'éteins), toutes les solutions possibles visaient vers la plaque Node MCU: le deux plaques se communiqueraient entre elles en utilisant le réseau WiFi.</p>
+                        <p class="text-justify">Cette plaque fonctionne (et peut être programmée) comme un Arduino, mais elle dispose également d'une antenne WiFi. Après avoir lu quelques documents, j'ai découvert que faire en sorte que le MCU se comporte comme un serveur web serait beaucoup plus facile à gérer que démarrer un système de communication <em>mqtt</em>.</p>
+                        <p class="text-justify">En utilisant des relais, des diodes et des photocoupleurs, mon PC écoutait en toute sécurité les instructions du MCU. Comme vous pouvez le voir sur la photo principale, j'ai soudé les composants dans une petite plaque, pour mieux les conserver et les sécuriser.</p>
+                        <h3><strong>Situation actuelle</strong><br></h3>
+                        <p class="text-justify">Le projet est actuellement en écart. Depuis le jour du «lancement», j'ai eu quelques problèmes avec un photocoupleur. Comme j'étais pressé, au lieu de le réparer correctement, j'ai modifié certains paramètres de la BIOS de mon ordinateur, afin que je puisse toujours allumer mon ordinateur avec le robot, mais, à cause de cela, je ne peux plus l'éteindre par Telegram. Mais malgré cela, le robot fonctionne parfaitement, et même avec quelques fonctionnalités supplémentaires.</p>
+                        <p class="text-justify">J'ai sécurisé le robot avec quelques options d'administrateur, des connexions/déconnexions très faciles, etc. et je l'ai fait facile à traduire, en mettant tous les messages que l'utilisateur peut voir dans un fichier <em>.json</em>.</p>
+                        <p class="text-justify">Et l'été dernier, j'ai connecté 3 webcams et je les ai configurées pour qu'elles enregistrent lorsqu'elles détectent un mouvement. Mais la relation avec les webcams et ce projet était qu'une capture d'écran de n'importe quelle webcam pouvait être envoyée à tout moment via Telegram en utilisant le robot.</p>
+                        <p class="text-justify">Vous pouvez vérifier certaines conceptions de base et l'intégralité du code source dans le <a href="https://github.com/royalmo/NodeMCU_PC">repositoire de GitHub</a>.</p>
+                        <h3>Améliorations futures</h3>
+                        <p class="text-justify">Nous pouvons faire beaucoup d'améliorations sur le projet. Tout d'abord, nous pourrions résoudre le problème de la plaque avec le photocoupleur. Et puis nous pourrions commencer par ajouter quelques fonctionnalités simples, comme un installateur, un manuel, une interface graphique, un sélecteur de langue, ... juste pour rendre le programme très personnalisable.</p>
+                        <p class="text-justify">Une chose que j'ai également prévu de faire (mais encore une fois, je n'ai pas prévu <em>quand</em> la faire) c'est de contrôler les haut-parleurs Raspberry à l'aide du robot de Telegram, et de les programmer, de sorte que de la musique soit joué pendant un horaire souhaitée.</p>
                     </div>
                     <div class="col-12 col-md-3 offset-md-1 meta">
                         <div class="tags"><span class="meta-heading">Dans ce projet j'ai utilisé...</span><span>Python</span><span>Telepot library</span><span>Arduino-style programming</span><span>The Node MCU WiFi library</span><span>Circuit board design</span><span class="meta-heading">Première version terminée le</span><span>May 2020</span></div>
