@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>EPSEM Bot - Eric Roy</title>
+    <meta name="description" content="EPSEM Bot es un robot de Discord que hize para comprovar si un usuario es o no es un estudiante de mi universidad. He hecho un sistema de verificación de mails y he hecho el código público.">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="../../assets/css/Article-List.css">
+    <link rel="stylesheet" href="../../assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="../../assets/css/Features-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="../../assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="../../assets/css/Projects-Horizontal.css">
+    <link rel="stylesheet" href="../../assets/css/Video-Responsive-YouTube.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="https://ericroy.net/es/">Eric Roy</a>
+            <div class="dropdown"><a class="dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="false" href="#">Español</a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/en/projects/epsembot">English</a><a class="dropdown-item" href="https://ericroy.net/ca/projects/epsembot">Català</a><a class="dropdown-item" href="https://ericroy.net/fr/projects/epsembot">Français</a></div>
+            </div><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Ver navegación</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/es/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/es/about-me">Sobre mi</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link" data-toggle="dropdown" aria-expanded="false" href="https://ericroy.net/es/project-list">Proyectos</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/es/projects/steppermotormusic">Stepper Motor Music</a><a class="dropdown-item" href="https://ericroy.net/es/nodemcu">Node MCU &amp; domótica</a><a class="dropdown-item" href="https://ericroy.net/es/epsembot">EPSEM Bot - Discord</a><a class="dropdown-item" href="https://ericroy.net/es/projects/smaller-projects">Proyectos pequeños</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/es/contact-me">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page project-page">
+        <section class="portfolio-block project">
+            <div class="container">
+                <div class="heading">
+                    <h2>EPSEM BOT</h2>
+                    <p>Un robot de discord que gestiona usuarios y roles.</p>
+                </div>
+                <div class="image" style="background-image:url(&quot;../../assets/img/hd_img/epsem_bot_showcase_code_snip.png&quot;);"></div>
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-1 info">
+                        <h3>¿Qué es?</h3>
+                        <p style="text-align: justify;">Tenemos un servidor de Discord donde nos encontramos casi todos los estudiantes de mi grado académico. Allí, podemos quedar y trabajar, o simplemente hablar. Este año (debido a la pandémia) no hemos podido quedar mucho presencialmente, así que el servidor ha sido una buena alternativa para conocernos entre nosotros.</p>
+                        <p style="text-align: justify;">El principal problema que tiene este servidor en comparación con los otros servicios que proporciona la universidad, es que cualquiera puede unirse al servidor: no se pide ninguna verificación para confirmar que seas estudiante del mismo grado, ni de la misma universidad... no era un lugar seguro.</p>
+                        <p style="text-align: justify;">Por eso pensé que seria una buena idea añadir un robot de Discord para que gestionara todas las verificaciones de usuarios, y ya que estamos, asignar los roles personalizados por cada estudiante relacionados con cada grado y asignatura.</p>
+                        <p style="text-align: justify;">Al tener un e-mail personalizado (@universidad.edu) en la universidad, si hacemos un robot de Discord que únicamente verifica e-mails si tienen esta terminación, ya podememos saber si un usuario puede entrar o no en el servidor.</p>
+                        <h3>Situación actual</h3>
+                        <p style="text-align: justify;">Para finales de 2020 he logrado sacar el MVP (producto viable mínimo) de este proyecto. Puede asignar roles y verificar e-mails. Y está hecho a prueba de errores: ¡todos los casos errónios han sido planificados y controlados!</p>
+                        <p style="text-align: justify;">Actualmente, estoy alojando este robot en la misma Raspberry Pi 4 que está alojando el proyecto del robot de Telegram, así que los costes de mantenimiento són mínimos si no nulos.</p>
+                        <p style="text-align: justify;">Podéis comprobar el estado actual del código fuente del proyecto yendo a su <a href="https://github.com/royalmo/EpsemBot">repositorio de GitHub</a>, donde subo cada cambio que hago en el código. Y hace un tiempo también hice un vídeo donde muestro la versión preliminar del robot a unos compañeros de la universidad. Lo tengo subido (en catalán) a YouTube, en oculto. Lo podéis ver aquí:</p>
+                        <div class="d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/guYZjuqu8qY" class="embed-responsive-item" width="320" height="175"></iframe></div>
+                        <h3><br>Mejoras planeadas</h3>
+                        <p style="text-align: justify;">Todavía hay muchas cosas por hacer en este proyecto, pero estoy orgulloso del resultado actual porque la parte más importante ya funciona: comprovar si un usuario es estudiante o no.</p>
+                        <p style="text-align: justify;">De momento solo tengo pensadas dos posibles mejoras:</p>
+                        <ul>
+                            <li style="text-align: justify;font-size: 17,6px;"><strong>Automatizar la parte de assignar los roles:</strong> actualmente, una vez el estudiante ha sido verificado, debe clicar en los botones correspondientes a las asignaturas que está cursando para obtener los respectivos roles. Si la universidad me diera alguna forma de ver en su base de datos que asignaturas está cursando un usuario con este e-mail, podría poner los roles automáticamente, sin pedir nada más al usuario. De esta forma, el robot seria mucho más eficiente.</li>
+                            <li style="text-align: justify;font-size: 17,6px;"><strong>Gestionar todos los canales de voz:</strong> si un usuario entra un canal de voz de una asignatura para hacer un trabajo en grupo, este canal estará ocupado. ¿Qué pasará entonces si otro grupo también quiere hacer un trabajo conjunto de la misma asignatura? En este caso deberíamos de crear un canal de voz temporal para este segundo grupo, y eliminarlo cuando el primero vuelva a estar libre. Este trabajo duro es una tarea que típicamente haria un robot.</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3 offset-md-1 meta">
+                        <div class="tags"><span class="meta-heading">En este proyecto he usado...</span><span>Python</span><span>Discord.py</span><span class="meta-heading">Demo terminada en</span><span>Diciembre de 2020</span></div>
+                    </div>
+                </div>
+                <div class="more-projects">
+                    <h3 class="text-center">Más Proyectos</h3>
+                    <div class="row gallery">
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="https://ericroy.net/es/projects/nodemcu"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/nodemcu_wiring.png"></a></div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="https://ericroy.net/es/projects/steppermotormusic"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/steppermotormusic_outside.jpg"></a></div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="https://ericroy.net/es/projects/smaller-projects"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/FMradio_3Dpreview.png"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"><a href="https://ericroy.net/es/about-me">Sobre mi</a><a href="https://ericroy.net/es/contact-me">Contacto</a><a href="https://ericroy.net/es/project-list">Proyectos</a></div>
+            <div class="social-icons"><a href="https://www.linkedin.com/in/ericrooy"><i class="icon ion-social-linkedin-outline"></i></a><a href="https://github.com/royalmo"><i class="icon ion-social-github-outline"></i></a><a href="mailto:eric@ericroy.net"><i class="icon ion-ios-email-outline"></i></a></div><span><br>© Eric Roy, 2021.&nbsp; Todos los derechos reservados.<br><br><br></span>
+        </div>
+    </footer>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="../../assets/js/theme.js"></script>
+</body>
+
+</html>

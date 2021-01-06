@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Node MCU - Eric Roy</title>
+    <meta name="description" content="El propósito de este proyecto era de encender y de apagar mi ordenador de forma remota mediante un robot de Telegram. También tiene algunas aplicaciones y funcionalidades secundarias.">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="../../assets/css/Article-List.css">
+    <link rel="stylesheet" href="../../assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="../../assets/css/Features-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="../../assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="../../assets/css/Projects-Horizontal.css">
+    <link rel="stylesheet" href="../../assets/css/Video-Responsive-YouTube.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="https://ericroy.net/es/">Eric Roy</a>
+            <div class="dropdown"><a class="dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="false" href="#">Español</a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/en/projects/nodemcu">English</a><a class="dropdown-item" href="https://ericroy.net/ca/projects/nodemcu">Català</a><a class="dropdown-item" href="https://ericroy.net/fr/projects/nodemcu">Français</a></div>
+            </div><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Ver navegación</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/es/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/es/about-me">Sobre mi</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link" data-toggle="dropdown" aria-expanded="false" href="https://ericroy.net/es/project-list">Proyectos</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="https://ericroy.net/es/projects/steppermotormusic">Stepper Motor Music</a><a class="dropdown-item" href="https://ericroy.net/es/nodemcu">Node MCU &amp; domótica</a><a class="dropdown-item" href="https://ericroy.net/es/epsembot">EPSEM Bot - Discord</a><a class="dropdown-item" href="https://ericroy.net/es/projects/smaller-projects">Proyectos pequeños</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://ericroy.net/es/contact-me">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page project-page">
+        <section class="portfolio-block project">
+            <div class="container">
+                <div class="heading">
+                    <h2>NODE MCU &amp; DOMOTICS</h2>
+                    <p>Apagar/encender el ordenador con un robot de Telegram.</p>
+                </div>
+                <div class="image" style="background-image:url(&quot;../../assets/img/hd_img/nodemcu_wiring.png&quot;);"></div>
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-1 info">
+                        <h3>¿Qué es?</h3>
+                        <p class="text-justify">El principal objetivo de este proyecto era de poder encender, apagar y comprobar si mi ordenador estaba encendido/apagado de forma remota a través de mensages por Telegram a un robot creado por mi mismo.</p>
+                        <p class="text-justify">Este robot está alojado en una Raspberry Pi 4 que he situado en el comedor, junto al router. De esa forma, siempre está encendida y con conexión a internet, por lo que el robot estará siempre operativo. Pero como que mi ordenador no se encuentra en el comedor, tenía que pensar en una solución para comunicar los dos aparatos.</p>
+                        <p class="text-justify">Después de descartar la idea de poner cables por toda la casa, y la de encender mi ordenador con la función de <em>Wake on LAN</em>, (ya que me gusta desconectar mi ordenador de la corriente cuando no está encendido), todas las soluciones apuntaban al uso de la placa Node MCU: se comunicaria con la Raspberry mediante WiFi.</p>
+                        <p class="text-justify">Esa placa funciona (y se programa) como un Arduino, pero también cuenta con una antena de WiFi. Después de leer algunas documentaciones y turoriales, encontré que la manera más sencilla de comunicar las dos placas era de tratar el MCU como un servidor web (que respondría a peticiones). En comparación con la alternativa del <em>mqtt</em>, me ahorraba muchas horas de trabajo.</p>
+                        <p class="text-justify">Utilizando algunos relés, diodos y fotocopladores, mi ordenador pudo ser conectado de forma segura a las instrucciones del MCU. Como podréis ver en la foto principal, soldé los componentes electrónicos en una pequeña placa, para mantenerlos más límpios y seguros.</p>
+                        <h3><strong>Situación actual</strong><br></h3>
+                        <p class="text-justify">Este proyecto se encuentra actualmente aparcado. Des del dia del "lanzamiento", he tenido diversos problemas con un fotocoplador. Como que me daba pereza y no tenia el tiempo suficiente para dedicar a repararlo, cambié algunos ajustes de la BIOS de mi ordenador, de tal forma que todavía lo puedo encender de forma remota, peró unicamente lo puedo apagar des de el menú de Windows. Sin embargo el robot funciona a la perfección, e incluso con algunas funcionalidades addicionales.</p>
+                        <p class="text-justify">He hecho el robot más "seguro", añadiendo permisos de usuario, contraseñas, registros de mensages, ... y también lo he puesto más "traducible": todos los mensages que ve el usuario estan guardados en un archivo <em>.json</em> en el que se puede escoger el idioma cambiando el nombre.</p>
+                        <p class="text-justify">Y el verano pasado, conecté 3 webcams (una de forma remota usando MotionEyeOS) y las puse en modo de grabar si detectan un movimiento. Pero la relación que tienen con este proyecto es que a todo momento podía pedir una captura de cualquier webcam a través del robot de Telegram.</p>
+                        <p class="text-justify">Podéis ver la electrónica básica y todo el código fuente en este <a href="https://github.com/royalmo/NodeMCU_PC">repositorio de GitHub</a>.</p>
+                        <h3>Mejoras planeadas</h3>
+                        <p class="text-justify">Se pueden hacer muchas cosas para mejorar este proyecto. Primero de todo, se puede reparar el problema que he estado experimentando con el fotocoplador. Y después se podrían empezar a poner funcionalidades adicionales, como un instalador, un manual, una GUI (interfaz de usuario), un selector de idioma, ... todo para hacer que el programa sea lo más personalizable posible.</p>
+                        <p class="text-justify">Y una cosa que también he planeado hacer (pero no he planeado <em>cuándo</em> hacerla) es de poder controlar unos altavoces que puse en la Raspberry Pi a través de Telegram: poder programar las canciones, los horarios donde debe de sonar música, etc.</p>
+                    </div>
+                    <div class="col-12 col-md-3 offset-md-1 meta">
+                        <div class="tags"><span class="meta-heading">En este proyecto he usado...</span><span>Python</span><span>La librería Telepot</span><span>Programación en lenguage Arduino</span><span>La librería de WiFi del Node MCU</span><span>Diseño de circuitos electrónicos</span><span class="meta-heading">Demo terminada en</span><span>Mayo de 2020</span></div>
+                    </div>
+                </div>
+                <div class="more-projects">
+                    <h3 class="text-center">Más Proyectos</h3>
+                    <div class="row gallery">
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="https://ericroy.net/es/projects/epsembot"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/epsem_bot_showcase_code_snip.png"></a></div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="https://ericroy.net/es/projects/steppermotormusic"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/steppermotormusic_outside.jpg"></a></div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="item"><a href="https://ericroy.net/es/projects/smaller-projects"><img class="img-fluid scale-on-hover" src="../../assets/img/hd_img/FMradio_3Dpreview.png"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"><a href="https://ericroy.net/es/about-me">Sobre mi</a><a href="https://ericroy.net/es/contact-me">Contacto</a><a href="https://ericroy.net/es/project-list">Proyectos</a></div>
+            <div class="social-icons"><a href="https://www.linkedin.com/in/ericrooy"><i class="icon ion-social-linkedin-outline"></i></a><a href="https://github.com/royalmo"><i class="icon ion-social-github-outline"></i></a><a href="mailto:eric@ericroy.net"><i class="icon ion-ios-email-outline"></i></a></div><span><br>© Eric Roy, 2021.&nbsp; Todos los derechos reservados.<br><br><br></span>
+        </div>
+    </footer>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="../../assets/js/theme.js"></script>
+</body>
+
+</html>
