@@ -1,5 +1,6 @@
 {
   "hosting": {
+
     "public": "public",
     "ignore": [
       "firebase.json",
@@ -7,6 +8,47 @@
       "**/node_modules/**"
     ],
 
-    "cleanUrls": true
+    "cleanUrls": true,
+    
+    "redirects": [
+      {
+        "source": "/:lang/projects",
+        "destination": "/:lang/project-list",
+        "type": 302
+      },
+
+      {
+        "source": "/",
+        "destination": "/en/",
+        "type": 302
+      },
+      {
+        "source": "/about-me",
+        "destination": "/en/about-me",
+        "type": 302
+      },
+      {
+        "source": "/contact-me",
+        "destination": "/en/contact-me",
+        "type": 302
+      },
+      {
+        "source": "/project-list",
+        "destination": "/en/project-list",
+        "type": 302
+      },
+      {
+        "source": "/projects",
+        "destination": "/en/project-list",
+        "type": 302
+      },
+
+      {
+        "source": "/projects/:proj",
+        "destination": "/en/projects/:proj",
+        "type": 302
+      }
+    ]
+
   }
 }
