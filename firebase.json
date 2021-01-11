@@ -9,6 +9,9 @@
     ],
 
     "cleanUrls": true,
+
+    "appAssociation": "AUTO",
+    "rewrites": [ { "source": "/**", "dynamicLinks": true } ],
     
     "redirects": [
       {
