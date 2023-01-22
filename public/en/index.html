@@ -138,11 +138,13 @@
     <script src="/dist/fnon.min.js"></script>
 
     <script>
-        Fnon.Alert.Success(
-            'This project has been done in late 2020 when I <b>had no idea of what was a framework</b> and the cool things you can do with. Please understand that now I may do this website much much much better.<br/>Anyway, be ready to get some cringe, because the pictures are also from late 2020 :)',
-            'Old project disclaimer',
-            'Ok, let me see the webpage now!',
-            ()=>{});
+        setTimeout(() => {
+            Fnon.Alert.Success(
+                'This project has been done in late 2020 when I <b>had no idea of what was a framework</b> and the cool things you can do with. Please understand that now I may do this website much much much better.<br/>Anyway, be ready to get some cringe, because the pictures are also from late 2020 :)',
+                'Old project disclaimer',
+                'Ok, let me see the webpage now!',
+                ()=>{});
+            }, 2000);
     </script>
 </body>
 
