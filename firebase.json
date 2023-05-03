@@ -50,6 +50,12 @@
         "source": "/projects/:proj",
         "destination": "/en/projects/:proj",
         "type": 302
+      },
+      
+      {
+        "source": "/cv",
+        "destination": "/EricRoyCV.pdf",
+        "type": 301
       }
     ]
 
