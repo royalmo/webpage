@@ -11,7 +11,7 @@
     "cleanUrls": true,
 
     "appAssociation": "AUTO",
-    "rewrites": [ { "source": "/**", "dynamicLinks": true } ],
+    "rewrites": [ { "source": "/**" } ],
     
     "redirects": [
       {
@@ -55,6 +55,12 @@
       {
         "source": "/cv",
         "destination": "/EricRoyCV.pdf",
+        "type": 301
+      },
+
+      {
+        "source": "/add-triplebot",
+        "destination": "https://discord.com/api/oauth2/authorize?client_id=795355199778586628&permissions=3288320&scope=bot",
         "type": 301
       }
     ]
