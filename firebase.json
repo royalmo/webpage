@@ -11,7 +11,6 @@
     "cleanUrls": true,
 
     "appAssociation": "AUTO",
-    "rewrites": [ { "source": "/**" } ],
     
     "redirects": [
       {
